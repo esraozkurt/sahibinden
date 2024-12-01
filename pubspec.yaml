@@ -52,6 +52,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/icons/sahibinden_icon_v13012023-2c3733810101ef3b43905c80a0f37ab8.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
