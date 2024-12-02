@@ -74,7 +74,7 @@ class _NavigationBarControllerState extends State<NavigationBarController> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: "Profil",
+            label: "Bana Özel",
           ),
 
 
