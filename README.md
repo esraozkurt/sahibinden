@@ -1,16 +1,19 @@
 # sahibinden
 
-A new Flutter project.
+Bu proje, online ikinci el platformu Sahibinden'in kullanıcı arayüzünün Flutter ile yapılan bir klonudur. Amacım, Sahibinden'in tasarımını Flutter widget'ları kullanarak yeniden oluşturmak ve arayüzün görsel yapısını takip etmektir.
 
-## Getting Started
+Flutter: Uygulama, responsive UI'ler oluşturmak için Flutter kullanılarak geliştirilmiştir.
+Dart: Uygulama geliştirme için kullanılan programlama dili.
+Kurulum
 
-This project is a starting point for a Flutter application.
+Depoyu klonlayın:
+git clone https://github.com/esraozkurt/sahibinden
+Proje dizinine gidin:
+cd sahibinden
+Bağımlılıkları yükleyin:
+flutter pub get
+Uygulamayı çalıştırın:
+flutter run
+Lisans
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Bu proje açık kaynaklıdır.
