@@ -69,7 +69,12 @@ class ServicesPage extends StatelessWidget {
                             color: Colors.grey,
                           ),
                           contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Oto360Page()),
+                            );
+                          },
                         ),
                         Divider(height: 1),
                         ListTile(
@@ -100,7 +105,12 @@ class ServicesPage extends StatelessWidget {
                             color: Colors.grey,
                           ),
                           contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Emlak360Page()),
+                            );
+                          },
                         ),
                         Divider(height: 1),
                       ],
@@ -111,6 +121,37 @@ class ServicesPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+
+class Oto360Page extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Oto360"),
+        backgroundColor: Colors.blue.shade800,
+      ),
+      body: Center(
+        child: Text("Oto360"),
+      ),
+    );
+  }
+}
+
+class Emlak360Page extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Emlak360"),
+        backgroundColor: Colors.blue.shade800,
+      ),
+      body: Center(
+        child: Text("Oto360"),
       ),
     );
   }
