@@ -25,7 +25,7 @@ class ProfilePage extends StatelessWidget {
           Expanded(
             child: Container(
               child: ListView(
-                padding: EdgeInsets.all(16),
+                padding: EdgeInsets.all(10),
                 children: [
                   SizedBox(height: 10),
                   Text(

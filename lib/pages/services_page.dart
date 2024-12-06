@@ -42,9 +42,14 @@ class ServicesPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         ListTile(
-                          leading: Transform.translate(
-                            offset: Offset(0, 50),
-                            child: Icon(Icons.directions_car, color: Colors.yellow , size: 40,),
+                          leading: CircleAvatar(
+                            radius: 24,
+                            backgroundColor: Colors.yellow,
+                            child: Icon(
+                              Icons.directions_car,
+                              color: Colors.black,
+                              size: 24,
+                            ),
                           ),
                           title: Text(
                             "Oto360",
@@ -54,25 +59,28 @@ class ServicesPage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          subtitle: Text(
+                            "Araç Alım/Satım İşlemlerinizde İhtiyacınız Olan Tüm Servisler sahibinden.com'da!",
+                            style: TextStyle(fontSize: 14, color: Colors.grey),
+                          ),
                           trailing: Icon(
                             Icons.arrow_forward_ios,
                             size: 20,
                             color: Colors.grey,
                           ),
+                          contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                           onTap: () {},
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 8),
-                          child: Text(
-                            "Araç Alım/Satım İşlemlerinizde İhtiyacınız Olan Tüm Servisler sahibinden.com'da!",
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
-                          ),
-                        ),
-                        Divider(height: 1, indent: 55),
+                        Divider(height: 1),
                         ListTile(
-                          leading: Transform.translate(
-                            offset: Offset(0, 50),
-                            child: Icon(Icons.home, color: Colors.yellow , size: 40,),
+                          leading: CircleAvatar(
+                            radius: 24,
+                            backgroundColor: Colors.yellow,
+                            child: Icon(
+                              Icons.home,
+                              color: Colors.black,
+                              size: 24,
+                            ),
                           ),
                           title: Text(
                             "Emlak360",
@@ -82,19 +90,17 @@ class ServicesPage extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          subtitle: Text(
+                            "Emlak Alım/Satım/Kiralama İşlemlerinizde İhtiyacınız Olan Tüm Servisler sahibinden.com'da!",
+                            style: TextStyle(fontSize: 14, color: Colors.grey),
+                          ),
                           trailing: Icon(
                             Icons.arrow_forward_ios,
                             size: 20,
                             color: Colors.grey,
                           ),
+                          contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                           onTap: () {},
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 8),
-                          child: Text(
-                            "Emlak Alım/Satım/Kiralama İşlemlerinizde İhtiyacınız Olan Tüm Servisler sahibinden.com'da!",
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
-                          ),
                         ),
                         Divider(height: 1),
                       ],
