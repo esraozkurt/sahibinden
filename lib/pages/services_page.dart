@@ -132,26 +132,206 @@ class Oto360Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Oto360"),
+        title: Text("Oto360",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
         backgroundColor: Colors.blue.shade800,
       ),
-      body: Center(
-        child: Text("Oto360"),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 150,
+              width: 500,
+              child: Image.asset(
+                'assets/images/images-2.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  Column(
+                    children: [
+                      CategoryItem(
+                        icon: Icons.key,
+                        text: "Alırken",
+                        details: "Aracınızı alırken Araç Değerleme, Araç Hasar Sorgulama gibi servislerden faydalanın.",
+                        color: Colors.green,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.money,
+                        text: "Satarken",
+                        details: "Aracınızı satarken Araç Değerleme ve Araç Satış Rehberi ile işlemlerinizi kolaylaştırın.",
+                        color: Colors.red,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.build,
+                        text: "Bakım & Onarım",
+                        details: "Oto servis hizmetlerimiz ile aracınızın bakım ve onarım ihtiyaçlarını giderin.",
+                        color: Colors.blue,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.percent,
+                        text: "Kredi",
+                        details: "Taşıt Kredisi tekliflerini karşılaştırarak size uygun alternatifi kolayca seçin.",
+                        color: Colors.orangeAccent,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.star,
+                        text: "Sıfır Araç Dünyası",
+                        details: "Hayalinizdeki sıfır araçları geliştirilmiş filtreleme seçenekleri ile hemen keşfedin.",
+                        color: Colors.purple,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.garage_outlined,
+                        text: "S-Aracım",
+                        details: "Aracınıza özel sunulan analiz, önemli tarihleri hatırlatma, belge saklama gibi hizmetlerimizden hemen yararlanın.",
+                        color: Colors.black,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
 
 class Emlak360Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Emlak360"),
+        title: Text("Emlak360",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
         backgroundColor: Colors.blue.shade800,
       ),
-      body: Center(
-        child: Text("Oto360"),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 150,
+              width: 500,
+              child: Image.asset(
+                'assets/images/sahibinden__2_-770x470.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  Column(
+                    children: [
+                      CategoryItem(
+                        icon: Icons.key,
+                        text: "Alırken",
+                        details: "Evinizi alırken Gayrimenkul Ekspertiz, Emlak Endeksi ve Emlak Alım Rehberinden faydalanın.",
+                        color: Colors.green,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.money,
+                        text: "Satarken",
+                        details: "Evinizi satarken Emlak Endeksi ve Emlak Satış Rehberi ile işinizi kolaylaştırın.",
+                        color: Colors.red,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.note_alt_outlined,
+                        text: "Kiralarken",
+                        details: "Evinizi Kiralarken Emlak Endeksi ve Emlak Kiralama Rehberinden faydalanın.",
+                        color: Colors.purple,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                      CategoryItem(
+                        icon: Icons.percent,
+                        text: "Kredi",
+                        details: "Konut Kredisi tekliflerini karşılaştırarak size en uygun alternatifi seçin.",
+                        color: Colors.orangeAccent,
+                      ),
+                      Divider(thickness: 1, color: Colors.grey[300]),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CategoryItem extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  final String details;
+  final Color color;
+
+  const CategoryItem({
+    required this.icon,
+    required this.text,
+    this.details = "",
+    required this.color,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        children: [
+          CircleAvatar(
+            backgroundColor: color,
+            child: Icon(icon, size: 20, color: Colors.white),
+          ),
+          SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                if (details.isNotEmpty)
+                  Text(
+                    details,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+              ],
+            ),
+          ),
+          Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
+        ],
       ),
     );
   }

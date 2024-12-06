@@ -44,7 +44,6 @@ class SearchPage extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  // Main categories
                   Column(
                     children: [
                       CategoryItem(

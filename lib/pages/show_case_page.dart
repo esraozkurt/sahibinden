@@ -6,14 +6,13 @@ class ShowcasePage extends StatefulWidget {
 }
 
 class _ShowcasePageState extends State<ShowcasePage> {
-  final List<int> _items = List.generate(8, (index) => index + 1); // Başlangıç verisi
+  final List<int> _items = List.generate(8, (index) => index + 1);
   final ScrollController _scrollController = ScrollController();
   bool _isLoading = false;
 
   @override
   void initState() {
     super.initState();
-    // Scroll dinleyicisi ekleniyor
     _scrollController.addListener(() {
       if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent && !_isLoading) {
         _loadMoreItems();
@@ -26,7 +25,6 @@ class _ShowcasePageState extends State<ShowcasePage> {
       _isLoading = true;
     });
 
-    // Veri yüklenmesini simüle etmek için bir gecikme ekliyoruz
     await Future.delayed(Duration(seconds: 2));
     final List<int> newItems = List.generate(8, (index) => _items.length + index + 1);
 
@@ -67,7 +65,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                 ),
-                itemCount: _items.length + 1, // Yükleme göstergesi için ek eleman
+                itemCount: _items.length + 1,
                 itemBuilder: (context, index) {
                   if (index < _items.length) {
                     return Card(
@@ -91,7 +89,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
                       ),
                     );
                   } else {
-                    // Yükleme göstergesi
+
                     return _isLoading
                         ? Padding(
                       padding: EdgeInsets.all(8.0),

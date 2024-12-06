@@ -54,7 +54,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/icons/sahibinden_icon_v13012023-2c3733810101ef3b43905c80a0f37ab8.png
-
+    - assets/images/images-2.png
+    - assets/images/sahibinden__2_-770x470.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
